@@ -152,6 +152,7 @@ def winning_team
   arr_val = []
   my_hash.each do |hash,val|
     count = 0
+    pp hash
     val[:players].each do |key,value|
       count += key[:points]
     end
