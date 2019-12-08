@@ -157,7 +157,7 @@ def winning_team
       count += key[:points]
     end
     arr_val << count
-    new_arr << {hash.to_s=>count}
+    new_arr << {val[:team_name]=>count}
   end
   pp new_arr
   large_size = arr_val.uniq.sort[-1]
