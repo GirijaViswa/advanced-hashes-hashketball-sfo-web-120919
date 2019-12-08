@@ -214,6 +214,19 @@ def long_name_steals_a_ton
 
 end
 
+def player_steal (name)
+  my_hash = game_hash
+  my_hash.each do |hash,val|
+    val[:players].each do |key,value|
+      if key[:player_name] == name
+        pts = key[:steals]
+        return pts
+    end
+  end
+  end
+  return nil
+end
+
 
 
 
