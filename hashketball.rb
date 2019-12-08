@@ -164,7 +164,7 @@ def winning_team
   pp large_size
   new_arr.each do |key|
     if val == large_size
-      return key
+      return key[:team_name]
     end
   end
 end
