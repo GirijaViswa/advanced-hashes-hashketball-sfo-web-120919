@@ -152,13 +152,14 @@ def winning_team
   arr_val = []
   my_hash.each do |hash,val|
     count = 0
-    pp hash
+    
     val[:players].each do |key,value|
       count += key[:points]
     end
     arr_val << count
-    new_arr << {hash[:team_name]=>count}
+    new_arr << {hash.to_s=>count}
   end
+  pp new_arr
   large_size = arr_val.uniq.sort[-1]
   new_arr.each do |ele|
     if ele[:team_name] == large_size
