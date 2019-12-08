@@ -112,6 +112,15 @@ end
 
 def big_shoe_rebouns()
   my_hash = game_hash
+  my_hash.each do |hash,val|
+    val[:players].each do |key,value|
+      if key[:player_name] == name
+        pts = key[:shoe]
+        return pts
+    end
+  end
+  end
+  return nil
   
 end
 
