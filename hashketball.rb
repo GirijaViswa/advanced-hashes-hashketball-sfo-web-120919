@@ -163,8 +163,10 @@ def winning_team
   large_size = arr_val.uniq.sort[-1]
   pp large_size
   new_arr.each do |key|
-    if val == large_size
-      return key[:team_name]
+    key.each do |k,v|
+      if v == large_size
+        return k
+      end
     end
   end
 end
