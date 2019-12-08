@@ -171,6 +171,31 @@ def winning_team
   end
 end
 
+def player_with_longest_name
+
+  my_hash = game_hash
+  new_arr = []
+  arr_val = []
+  my_hash.each do |hash,val|
+    val[:players].each do |key,value|
+      count += key[:points]
+    end
+    arr_val << count
+    new_arr << {val[:team_name]=>count}
+  end
+  
+  large_size = arr_val.uniq.sort[-1]
+  pp large_size
+  new_arr.each do |key|
+    key.each do |k,v|
+      if v == large_size
+        return k
+      end
+    end
+  end
+
+
+end
 
 
 
