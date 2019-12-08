@@ -121,7 +121,9 @@ def big_shoe_rebounds()
     end
   end
   large_size = arr_val.uniq.sort[-1]
-  pp large_size
+  new_arr.each do |ele|
+    pp ele
+  end
   
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
