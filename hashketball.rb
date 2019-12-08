@@ -140,8 +140,8 @@ def most_points_scored
   end
   large_size = arr_val.uniq.sort[-1]
   new_arr.each do |ele|
-    if ele[:shoe] == large_size
-      return ele[:rebounds]
+    if ele[:points] == large_size
+      return ele[:player_namel]
     end
   end
 end
