@@ -119,7 +119,7 @@ def big_shoe_rebounds()
       
     end
   end
-  pp new_arr
+  pp new_arr.sort
 end
 
 
