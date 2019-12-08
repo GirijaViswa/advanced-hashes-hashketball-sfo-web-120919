@@ -116,10 +116,9 @@ def big_shoe_rebounds()
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
       new_arr << {key[:player_name] =>  key[:shoe]}
-      
     end
   end
-  pp new_arr.sort_by{|item| item.max}
+  
 end
 
 
