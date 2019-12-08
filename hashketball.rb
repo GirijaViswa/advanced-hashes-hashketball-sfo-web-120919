@@ -113,12 +113,15 @@ end
 def big_shoe_rebounds()
   my_hash = game_hash
   new_arr = []
+  arr_val = []
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
       new_arr << key
+      arr_val << key[:shoe]
     end
   end
-  pp new_arr
+  pp arr_val
+  
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
       if key[:player_name] == name
