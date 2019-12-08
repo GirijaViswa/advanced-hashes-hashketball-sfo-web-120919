@@ -119,7 +119,15 @@ def big_shoe_rebounds()
     end
   end
   
-  new_val
+  my_hash.each do |hash,val|
+    val[:players].each do |key,value|
+      if key[:player_name] == name
+        pts = key[:rebounds]
+        return pts
+    end
+  end
+  end
+  
 end
 
 
