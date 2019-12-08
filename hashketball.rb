@@ -183,7 +183,7 @@ def player_with_longest_name
     arr_val << len
     new_arr << key
   end
-end
+    end
   large_size = arr_val.uniq.sort[-1]
   #pp new_arr
   new_arr.each do |key|
