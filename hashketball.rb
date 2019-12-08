@@ -178,12 +178,12 @@ def player_with_longest_name
   arr_val = []
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
-      count += key[:points]
-    end
-    arr_val << count
-    new_arr << {val[:team_name]=>count}
+      len = key[:player_name].length
+    
+    arr_val << len
+    new_arr << key
   end
-  
+end
   large_size = arr_val.uniq.sort[-1]
   pp large_size
   new_arr.each do |key|
