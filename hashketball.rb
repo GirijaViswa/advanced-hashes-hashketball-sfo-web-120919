@@ -159,8 +159,9 @@ def winning_team
     arr_val << count
     new_arr << {val[:team_name]=>count}
   end
-  pp new_arr
+  
   large_size = arr_val.uniq.sort[-1]
+  pp large_size
   new_arr.each do |key,val|
     if val == large_size
       return key
