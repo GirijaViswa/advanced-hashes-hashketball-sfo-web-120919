@@ -110,8 +110,9 @@ def player_stats (name)
   return nil
 end
 
-def big_shoe_rebouns
-
+def big_shoe_rebouns()
+  my_hash = game_hash
+  
 end
 
 
