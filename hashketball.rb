@@ -147,6 +147,23 @@ def most_points_scored
 end
 
 def winning_team
+  my_hash = game_hash
+  new_arr = []
+  arr_val = []
+  my_hash.each do |hash,val|
+    count = 0
+    val[:players].each do |key,value|
+      count += key[:points]
+    end
+    arr_val << count
+    new_arr << {hash[:team_name]=>count}
+  end
+  large_size = arr_val.uniq.sort[-1]
+  new_arr.each do |ele|
+    if ele[:team_name] == large_size
+      return ele[:team_name]
+    end
+  end
 end
 
 
