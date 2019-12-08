@@ -139,8 +139,6 @@ def most_points_scored
     end
   end
   large_size = arr_val.uniq.sort[-1]
-  pp large_size
-  pp new_arr
   new_arr.each do |ele|
     if ele[:points] == large_size
       return ele[:player_name]
