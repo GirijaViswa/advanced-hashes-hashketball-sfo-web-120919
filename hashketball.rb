@@ -196,6 +196,22 @@ end
 
 def long_name_steals_a_ton
   name = player_with_longest_name
+   my_hash = game_hash
+  new_arr = []
+  arr_val = []
+  my_hash.each do |hash,val|
+    val[:players].each do |key,value|
+      
+    end
+  end
+  large_size = arr_val.uniq.sort[-1]
+  #pp new_arr
+  new_arr.each do |key|
+    if key[:player_name].length == large_size
+      return key[:player_name]
+      end
+  end
+
 end
 
 
