@@ -119,7 +119,7 @@ def big_shoe_rebounds()
       
     end
   end
-  pp new_arr.sort_by{}
+  pp new_arr.sort_by{|item| item.max}
 end
 
 
