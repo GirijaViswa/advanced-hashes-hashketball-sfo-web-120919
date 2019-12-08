@@ -110,7 +110,7 @@ def player_stats (name)
   return nil
 end
 
-def big_shoe_rebouns()
+def big_shoe_rebounds()
   my_hash = game_hash
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
