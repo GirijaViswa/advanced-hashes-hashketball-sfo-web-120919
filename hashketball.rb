@@ -143,7 +143,7 @@ def most_points_scored
   pp new_arr
   new_arr.each do |ele|
     if ele[:points] == large_size
-      return ele[:player_namel]
+      return ele[:player_name]
     end
   end
 end
