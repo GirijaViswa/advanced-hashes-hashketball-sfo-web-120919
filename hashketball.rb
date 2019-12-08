@@ -185,15 +185,12 @@ def player_with_longest_name
   end
 end
   large_size = arr_val.uniq.sort[-1]
-  pp new_arr
+  #pp new_arr
   new_arr.each do |key|
-    key.each do |k,v|
-      if v == large_size
-        return k
+    if key[:player_name].length == large_size
+      return key[:player_name]
       end
-    end
-  end
-
+end
 
 end
 
