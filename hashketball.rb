@@ -202,7 +202,7 @@ def long_name_steals_a_ton?
   arr_val = []
   my_hash.each do |hash,val|
     val[:players].each do |key,value|
-      if key[:steal] > steal
+      if key[:steals] > steal
         return false
       end
     end
