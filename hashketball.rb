@@ -129,7 +129,21 @@ def big_shoe_rebounds()
 end
 
 def most_points_scored
-
+  my_hash = game_hash
+  new_arr = []
+  arr_val = []
+  my_hash.each do |hash,val|
+    val[:players].each do |key,value|
+      new_arr << key
+      arr_val << key[:points]
+    end
+  end
+  large_size = arr_val.uniq.sort[-1]
+  new_arr.each do |ele|
+    if ele[:shoe] == large_size
+      return ele[:rebounds]
+    end
+  end
 end
 
 
